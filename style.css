@@ -1,0 +1,133 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, #f3909b, #6dbde8);
+  color: #111;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #cfd9df, #e2ebf0);
+  padding: 10px 20px;
+  border-radius: 20px;
+  max-width: 90%;
+  margin: 10px auto;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #ff6600;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.hello {
+  color: orange;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.name {
+  font-size: 50px;
+  font-weight: 900;
+  margin: 15px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    gap: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Hamburger animation (X when active) */
+.hamburger.toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+.section {
+  padding: 80px 20px;
+}
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+.section p {
+  font-size: 18px;
+}
+.nav-links .active {
+  color: #ff6600;
+  font-weight: bold;
+}
